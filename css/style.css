@@ -1,11 +1,18 @@
-html, body{
-    height: 100%;
+body {
+    background-color: #000;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin-top: 50px; /* Adjust as needed */
 }
 
-body{
-    background-color: lightgray;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+#myCanvas {
+    display: block;
+    margin: 0 auto;
+    background-color: #000;
 }
