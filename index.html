@@ -1,21 +1,79 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>ps1 hagrid</title>
-    <link rel="stylesheet" href="css/meyerweb_reset.css">
-    <link rel="stylesheet" href="css/style.css">
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Haggord</title>
+        <link rel="stylesheet" href="styles.css">
+        <!-- Favicon -->
+        <link rel="icon" href="ps1haggy.png" type="image/png">
+    </head>  
 <body>
-    <h1>ps1 hagrid</h1>
-    <span>The Wizard of Solana</span>
-
-    <span>CA: AYyYgh3i43s1QSpvG4vwhJ6s3gewfN7uteFwYrswgMGw</span>
-    <canvas id="myCanvas"></canvas>
-
-    <script src="js/main.js" defer></script>
+    <div class="background-video">
+        <video autoplay muted loop>
+            <source src="haggy.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+    <div class="overlay">
+        <div class="logo-container">
+            <img src="logo.png" alt="Logo" class="logo">
+        </div>
+        <div class="leaderboard-container">
+            <div class="leaderboard-title"></div>
+            <div class="leaderboard-entry">
+                <span class="leaderboard-label">Token Supply:</span>
+                <span class="leaderboard-value">995,596.78 tokens</span>
+            </div>
+            <div class="leaderboard-entry">
+                <span class="leaderboard-label">Contract Address:</span>
+                <span class="leaderboard-value copyable" id="contract-address">
+                    AYyYgh3i43s1QSpvG4vwhJ6s3gewfN7uteFwYrswgMGw
+                </span>
+            </div>
+            <div class="leaderboard-entry">
+                <span class="leaderboard-label">Mint:</span>
+                <span class="leaderboard-value">Revoked</span>
+            </div>
+            <div class="leaderboard-entry">
+                <span class="leaderboard-label">Liquidity:</span>
+                <span class="leaderboard-value">Burnt</span>
+            </div>
+        </div>
+        
+        <!-- Loading bar and social links at the bottom -->
+        <div class="bottom-container">
+            <div class="loading-container">
+                <div class="loading-bar">
+                    <div class="loading-progress"></div>
+                </div>
+                <p class="loading-text">Loading...</p>
+            </div>
+            <div class="social-links">
+                <a href="https://jup.ag/swap/SOL-AYyYgh3i43s1QSpvG4vwhJ6s3gewfN7uteFwYrswgMGw" class="social-icon" id="link1" target="_blank">
+                    <img src="jupiter.png" alt="Jupiter Exchange">
+                </a>
+                <a href="https://raydium.io/swap/?inputMint=sol&outputMint=AYyYgh3i43s1QSpvG4vwhJ6s3gewfN7uteFwYrswgMGw" class="social-icon" id="link2" target="_blank">
+                    <img src="raydium.png" alt="Raydium Exchange">
+                </a>
+                <a href="https://dexscreener.com/solana/ayyygh3i43s1qspvg4vwhj6s3gewfn7utefwyrswgmgw" class="social-icon" id="link3" target="_blank">
+                    <img src="dexscrenner.png" alt="DexScreener">
+                </a>
+                <a href="https://t.me/bonkbot_bot?start=ref_q45va" class="social-icon" id="link4" target="_blank">
+                    <img src="bonkbot.png" alt="BonkBot Telegram">
+                </a>
+                <a href="https://x.com/THEREALHAGGORD?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor&mx=2" class="social-icon" id="link5" target="_blank">
+                    <img src="x.png" alt="Twitter (X)">
+                </a>
+                <a href="https://t.me/RealHaggordOnSol" class="social-icon" id="link6" target="_blank">
+                    <img src="telegram.png" alt="RealHaggord Telegram">
+                </a>
+                <a href="https://www.dextools.io/app/en/solana/pair-explorer/5hS9KWybCDSMTuFynUmGCq6q3W4PeREkzbp2MJFsTtqG?t=1723802465863" class="social-icon" id="link7" target="_blank">
+                    <img src="dextools.png" alt="DexTools">
+                </a>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
