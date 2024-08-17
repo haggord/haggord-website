@@ -14,6 +14,7 @@ body, html {
     font-family: 'Cinzel', serif;
     color: #00ff00;
     background: transparent;
+    overflow-x: hidden;
 }
 
 /* Logo Container and Logo Styles */
@@ -205,12 +206,16 @@ body, html {
 }
 
 /* Responsive Design */
-@media (max-width: 600px) {
+@media (max-width: 768px) {
+    /* Adjustments for mobile devices */
     .leaderboard-container {
-        top: 20px;
-        max-width: 90%;
+        width: 90%;
         left: 5%;
-        padding: 5px;
+        top: 20px;
+    }
+
+    .logo-container {
+        top: 5px;
     }
 
     .logo {
@@ -222,11 +227,29 @@ body, html {
     }
 
     .loading-container, .social-links {
-        width: calc(90% + 3cm);
+        width: 90%;
+        padding: 5px;
     }
 
     .social-icon img {
         width: 25px;
         height: 25px;
+    }
+
+    .leaderboard-container {
+        top: 50px;
+        width: 80%;
+    }
+
+    .leaderboard-entry {
+        margin-bottom: 7px;
+    }
+
+    .loading-bar {
+        height: 15px;
+    }
+
+    .loading-text {
+        font-size: 0.9em;
     }
 }
