@@ -67,64 +67,15 @@ body, html {
     background: transparent;
 }
 
-/* Leaderboard Styles */
-.leaderboard-container {
-    position: absolute;
-    top: 70px;
-    left: 10px;
-    width: 300px;
-    border: 2px solid #00ff00;
-    padding: 10px;
-    font-size: 0.9em;
-    box-shadow: 0 0 10px #ffd700;
-    background: rgba(0, 0, 0, 0.7);
-    z-index: 2;
-}
-
-.leaderboard-title {
-    font-size: 1.2em;
-    font-weight: bold;
-    text-align: center;
-    border-bottom: 1px dashed #ffd700;
-    padding-bottom: 5px;
-    margin-bottom: 10px;
-    color: #ffd700;
-}
-
-.leaderboard-title:before {
-    content: 'Haggord Stinkynomics';
-}
-
-.leaderboard-entry {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 10px;
-    color: #00ff00;
-}
-
-.leaderboard-label {
-    font-weight: bold;
-    font-size: 0.8em;
-    color: #ffd700;
-}
-
-.leaderboard-value {
-    color: #00ff00;
-    cursor: pointer;
-    user-select: text;
-    font-size: 0.85em;
-    word-wrap: break-word;
-}
-
 /* Bottom Container Styles */
 .bottom-container {
-    position: fixed;
-    bottom: 5px;
-    left: 50%;
-    transform: translateX(-50%);
+    position: absolute;
+    bottom: 0.5in; /* Maintain the 4 inches from bottom */
     display: flex;
     flex-direction: column;
     align-items: center;
+    transform: translateX(-50%);
+    left: 50%;
 }
 
 /* Loading Bar Styles */
@@ -166,8 +117,8 @@ body, html {
 .loading-text {
     position: absolute;
     bottom: -2px;
-    left: 50%;
-    transform: translateX(-50%);
+    left: 0;
+    width: 100%;
     color: #ffd700;
     font-size: 1.1em;
     text-align: center;
@@ -205,15 +156,56 @@ body, html {
     filter: drop-shadow(2px 2px 5px #ffd700);
 }
 
+/* Leaderboard Styles */
+.leaderboard-container {
+    width: 300px;
+    border: 2px solid #00ff00;
+    padding: 10px;
+    font-size: 0.9em;
+    box-shadow: 0 0 10px #ffd700;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 2;
+    margin-top: 6in; /* Increased margin to move the leaderboard even lower */
+}
+
+.leaderboard-title {
+    font-size: 1.2em;
+    font-weight: bold;
+    text-align: center;
+    border-bottom: 1px dashed #ffd700;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+    color: #ffd700;
+}
+
+.leaderboard-title:before {
+    content: 'Haggord Stinkynomics';
+}
+
+.leaderboard-entry {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    color: #00ff00;
+}
+
+.leaderboard-label {
+    font-weight: bold;
+    font-size: 0.8em;
+    color: #ffd700;
+}
+
+.leaderboard-value {
+    color: #00ff00;
+    cursor: pointer;
+    user-select: text;
+    font-size: 0.85em;
+    word-wrap: break-word;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     /* Adjustments for mobile devices */
-    .leaderboard-container {
-        width: 90%;
-        left: 5%;
-        top: 20px;
-    }
-
     .logo-container {
         top: 5px;
     }
@@ -222,8 +214,8 @@ body, html {
         max-width: 150px;
     }
 
-    .bottom-container {
-        bottom: 5px;
+    .leaderboard-container {
+        width: 80%;
     }
 
     .loading-container, .social-links {
@@ -234,15 +226,6 @@ body, html {
     .social-icon img {
         width: 25px;
         height: 25px;
-    }
-
-    .leaderboard-container {
-        top: 50px;
-        width: 80%;
-    }
-
-    .leaderboard-entry {
-        margin-bottom: 7px;
     }
 
     .loading-bar {
