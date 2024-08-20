@@ -15,6 +15,8 @@ body, html {
     color: #00ff00;
     background: transparent;
     overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
 }
 
 /* Logo Container and Logo Styles */
@@ -37,17 +39,20 @@ body, html {
 /* Background Video Styles */
 .background-video {
     position: fixed;
-    top: -1in;
+    top: 0;
     left: 0;
     width: 100%;
-    height: calc(100% + 1in);
+    height: 100%;
     overflow: hidden;
     z-index: -1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .background-video video {
-    width: 100%;
-    height: 100%;
+    max-width: 100%;
+    height: auto;
     object-fit: cover;
     filter: grayscale(80%) contrast(120%) brightness(80%);
 }
@@ -64,18 +69,16 @@ body, html {
     justify-content: flex-start;
     align-items: center;
     padding-top: 70px;
-    background: transparent;
 }
 
 /* Bottom Container Styles */
 .bottom-container {
     position: absolute;
-    bottom: 0.5in; /* Maintain the 4 inches from bottom */
+    bottom: 0.3in;
     display: flex;
     flex-direction: column;
     align-items: center;
-    transform: translateX(-50%);
-    left: 50%;
+    transform: translateY(-50%);
 }
 
 /* Loading Bar Styles */
@@ -128,7 +131,7 @@ body, html {
 .social-links {
     display: flex;
     justify-content: center;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     width: calc(80% + 3cm);
     max-width: calc(600px + 3cm);
     padding: 10px 1.5cm;
@@ -165,7 +168,7 @@ body, html {
     box-shadow: 0 0 10px #ffd700;
     background: rgba(0, 0, 0, 0.7);
     z-index: 2;
-    margin-top: 6in; /* Increased margin to move the leaderboard even lower */
+    margin-top: 6in;
 }
 
 .leaderboard-title {
@@ -205,7 +208,6 @@ body, html {
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    /* Adjustments for mobile devices */
     .logo-container {
         top: 5px;
     }
@@ -234,5 +236,14 @@ body, html {
 
     .loading-text {
         font-size: 0.9em;
+    }
+
+    .background-video {
+        top: 0;
+        height: 100%;
+    }
+
+    .background-video video {
+        object-fit: cover;
     }
 }
