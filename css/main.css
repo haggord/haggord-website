@@ -1,0 +1,136 @@
+/* Import a retro font */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700&display=swap');
+
+canvas {
+    position: absolute; /* Make the canvas occupy the full viewport and stay in the background */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Ensure the canvas is behind the overlay */
+}
+
+html, body {
+    /*
+        For some strange reason, I cannot import matter.js without this (">) char
+        showing up. Also the tag does not close, but when i remove that part, the lib
+        does not import. No idea why. For now, just make all text invisible by default.
+    */
+    color: transparent;
+}
+
+
+html, body {
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main {
+    color: black;
+    padding: 2em;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+/* Logo Container and Logo Styles */
+.logo-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    width: 20em;
+    height: auto;
+    filter: drop-shadow(2px 2px 5px #ffd700);
+}
+
+
+/* Leaderboard Styles */
+.leaderboard-container {
+    width: 50vw;
+    border: 2px solid #00ff00;
+    padding: 10px;
+    font-size: 0.9em;
+    box-shadow: 0 0 10px #ffd700;
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.leaderboard-title {
+    font-size: 1.5em;
+    font-weight: bold;
+    text-align: center;
+    border-bottom: 1px dashed #ffd700;
+    padding-bottom: 1em;
+    margin-bottom: 1em;
+    color: #ffd700;
+}
+
+.leaderboard-title:before {
+    content: 'Haggord Stinkynomics';
+}
+
+.leaderboard-entry {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.4em;
+    color: #00ff00;
+}
+
+.leaderboard-label {
+    font-weight: bold;
+    font-size: 1.2em;
+    color: #ffd700;
+}
+
+.leaderboard-value {
+    color: #00ff00;
+    cursor: pointer;
+    user-select: text;
+    font-size: 0.85em;
+    word-wrap: break-word;
+}
+
+
+/* Social Links Styles */
+.social-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 2em;
+    border: 1px solid #ffd700;
+    box-shadow: 0 0 10px #ffd700;
+    gap: 3em;
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.social-icon {
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+.social-icon img {
+    width: 3em;
+    height: 3em;
+    transition: transform 0.3s;
+    filter: drop-shadow(2px 2px 5px #000);
+}
+
+.social-icon:hover img {
+    transform: scale(1.1);
+    filter: drop-shadow(2px 2px 5px #ffd700);
+}
