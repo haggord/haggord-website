@@ -36,7 +36,7 @@ body {
 
 main {
     color: black;
-    padding: 2em;
+    padding: min(2em, 25px);
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -54,7 +54,8 @@ main {
 }
 
 .logo {
-    width: 20em;
+    width: 12vw;
+    min-width: 10em;
     height: auto;
     filter: drop-shadow(2px 2px 5px #ffd700);
 }
@@ -62,7 +63,7 @@ main {
 
 /* Leaderboard Styles */
 .leaderboard-container {
-    width: 50vw;
+    width: 70%;
     border: 2px solid #00ff00;
     padding: 10px;
     font-size: 0.9em;
@@ -114,18 +115,14 @@ main {
     padding: 2em;
     border: 1px solid #ffd700;
     box-shadow: 0 0 10px #ffd700;
-    gap: 3em;
+    gap: 3.2vw;
     background: rgba(0, 0, 0, 0.7);
 }
 
-.social-icon {
-    padding: 5px;
-    box-sizing: border-box;
-}
 
 .social-icon img {
-    width: 3em;
-    height: 3em;
+    width: 2.5vw;
+    min-width: 1.3em;
     transition: transform 0.3s;
     filter: drop-shadow(2px 2px 5px #000);
 }
